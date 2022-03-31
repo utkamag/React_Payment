@@ -1,15 +1,29 @@
-import {Link} from "react-router-dom";
-import {Button} from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { Container, Toolbar, AppBar, IconButton, Typography, Box, Button } from "@material-ui/core";
+import Home from "@material-ui/icons/Home";
+import useStyles from "./Style";
 
-//Компонент Header
 
-function Header(){
-    return(
-        <div className="Header">
-            <Link to="/"><img src="images\Header\Header_phone.png" alt="phone" width="60px"/></Link>
-            <Button variant="contained">Text</Button>
+// Компонент Header
 
-        </div>
+function Header() {
+    const classes = useStyles()
+    return (
+        <AppBar position="relative">
+            <Container>
+                <Toolbar>
+                    <Link to="/">
+                        <IconButton>
+                        <Home fontSize="large"/>
+                    </IconButton>
+                    </Link>
+                    <Typography variant="h6" className={classes.title}>React Payment Project</Typography>
+                    <Box>
+                        <Button variant="outlined">Войти</Button>
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
 
     )
 }
