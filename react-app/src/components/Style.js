@@ -36,8 +36,13 @@ const useStyles = makeStyles((theme) => ({
 
     footer: {
         marginTop: "75px"
-    }
+    },
 
+    // Payment
+
+    containerPayment: {
+        padding: "50px 0"
+    }
 }))
 
 export default useStyles
