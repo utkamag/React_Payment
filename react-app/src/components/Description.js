@@ -11,7 +11,7 @@ function Description() {
                 <div className="description_main">
                     <Typography variant="h2">Сервис по оплате мобильной связи</Typography>
                     <Typography variant="h4">Пополнение счёта онлайн</Typography>
-                    <Typography variant="h8" className="description_pay">Комисия за поплнение - 0%</Typography>
+                    <Typography variant="h8" className="description_pay">Комисия за пополнение - 0%</Typography>
                 </div>
             </Paper>
         </Container>
