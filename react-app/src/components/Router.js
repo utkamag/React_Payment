@@ -1,4 +1,4 @@
-
+import Payment from "./Payment";
 import App from "./App";
 import {Routes, Route} from "react-router-dom";
 
@@ -8,6 +8,7 @@ function Router() {
     return(
         <Routes>
             <Route path="/" element={<App/>}/>
+            <Route path="/payment" element={<Payment/>}/>
         </Routes>
 
     )

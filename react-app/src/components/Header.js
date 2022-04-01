@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Container, Toolbar, AppBar, IconButton, Typography, Box, Button } from "@material-ui/core";
+import {Link} from "react-router-dom";
+import {Container, Toolbar, AppBar, IconButton, Typography, Box, Button} from "@material-ui/core";
 import Home from "@material-ui/icons/Home";
 import useStyles from "./Style";
 
@@ -14,8 +14,8 @@ function Header() {
                 <Toolbar>
                     <Link to="/">
                         <IconButton>
-                        <Home fontSize="large"/>
-                    </IconButton>
+                            <Home fontSize="large"/>
+                        </IconButton>
                     </Link>
                     <Typography variant="h6" className={classes.title}>React Payment Project</Typography>
                     <Box>

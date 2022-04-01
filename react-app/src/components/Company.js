@@ -24,9 +24,11 @@ function Company() {
                                 Мегафон
                             </Typography>
                         </CardContent>
-                        <CardActions className={classes.companyButton}>
-                            <Button color="primary" variant="outlined">Оплатить связь</Button>
-                        </CardActions>
+                        <Link to="/payment">
+                            <CardActions className={classes.companyButton}>
+                                <Button color="primary" variant="outlined">Оплатить связь</Button>
+                            </CardActions>
+                        </Link>
                     </Card>
                 </Grid>
 
@@ -43,9 +45,11 @@ function Company() {
                                 МТС
                             </Typography>
                         </CardContent>
-                        <CardActions className={classes.companyButton}>
-                            <Button color="primary" variant="outlined">Оплатить связь</Button>
-                        </CardActions>
+                        <Link to="/payment">
+                            <CardActions className={classes.companyButton}>
+                                <Button color="primary" variant="outlined">Оплатить связь</Button>
+                            </CardActions>
+                        </Link>
                     </Card>
                 </Grid>
 
@@ -62,9 +66,11 @@ function Company() {
                                 Yota
                             </Typography>
                         </CardContent>
-                        <CardActions className={classes.companyButton}>
-                            <Button color="primary" variant="outlined">Оплатить связь</Button>
-                        </CardActions>
+                        <Link to="/payment">
+                            <CardActions className={classes.companyButton}>
+                                <Button color="primary" variant="outlined">Оплатить связь</Button>
+                            </CardActions>
+                        </Link>
                     </Card>
                 </Grid>
 
