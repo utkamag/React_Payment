@@ -1,16 +1,25 @@
-import { Link } from "react-router-dom";
-import { TableFooter, Typography, Button, Grid, Card, CardMedia, CardContent, CardActions} from "@material-ui/core";
+import {Box,Typography} from "@material-ui/core";
+import {Link} from "react-router-dom";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import useStyles from "./Style";
 
 function Footer() {
     const classes = useStyles()
-    return(
+    return (
         <footer className={classes.footer}>
-            <Typography variant="h6" align="center" gutterBottom color="textSecondary">
-                2022
-            </Typography>
+            <Box className={classes.footerBox}>
+
+                <Box className={classes.footerIcon}>
+                    <GitHubIcon fontSize="small" color="primary"/>
+                </Box>
+
+                <Link to="https://github.com/utkamag">
+                    <Typography variant="button" className={classes.footerLink}>utkamag</Typography>
+                </Link>
+
+            </Box>
         </footer>
-    )
+)
 }
 
 export default Footer

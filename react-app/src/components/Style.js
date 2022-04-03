@@ -37,6 +37,20 @@ const useStyles = makeStyles((theme) => ({
     footer: {
         marginTop: "75px"
     },
+    footerBox: {
+        display: "flex",
+        justifyContent: "center",
+        marginRight: "5px"
+    },
+    footerIcon: {
+      marginRight: "5px"
+    },
+    footerLink: {
+        '&:hover': {
+            color: "#002984",
+        },
+      textDecoration: "none"
+    },
 
     // Payment
 

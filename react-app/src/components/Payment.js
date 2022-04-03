@@ -1,14 +1,14 @@
 import {Link} from "react-router-dom";
 import { Container, IconButton, Box } from "@material-ui/core";
 import useStyles from "./Style";
-import Home from "@material-ui/icons/Home";
+import {PhoneIphone} from "@material-ui/icons";
 
 function Payment() {
     const classes = useStyles()
     return (
         <Container className={classes.containerPaymen}>
             <Box>
-                <Home fontSize="large"/>
+                <PhoneIphone fontSize="large"/>
             </Box>
         </Container>
     )
