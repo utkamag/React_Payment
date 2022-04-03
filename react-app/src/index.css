@@ -27,3 +27,16 @@ body {
     text-decoration: none;
 }
 
+/* Payment */
+
+.container_payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.payment_avatar {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}

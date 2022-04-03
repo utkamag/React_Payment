@@ -54,10 +54,7 @@ const useStyles = makeStyles((theme) => ({
 
     // Payment
 
-    avatar: {
-        margin: theme.spacing(2),
-        padding: "20px",
-    }
+
 }))
 
 export default useStyles

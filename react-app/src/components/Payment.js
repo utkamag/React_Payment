@@ -1,17 +1,19 @@
 import {Link} from "react-router-dom";
-import {Container, Avatar, Box, Typography, Grid} from "@material-ui/core";
+import {Container, Avatar, Box, Typography, TextField} from "@material-ui/core";
 import useStyles from "./Style";
 import {PhoneIphone} from "@material-ui/icons";
 
 function Payment() {
     const classes = useStyles()
     return (
-        <Grid className={classes.containerPaymen} container direction="column" alignContent="center" justifyContent="center">
-            <Avatar className={classes.avatar}>
+        <div className="container_payment">
+            <div className="payment_avatar">
                 <PhoneIphone color="primary" fontSize="large"/>
-            </Avatar>
+            </div>
             <Typography color="inherit" align="center" variant="h2">Оплата телефона</Typography>
-        </Grid>
+            <TextField id="outlined-basic" label="Outlined" variant="outlined" size="small" />
+
+        </div>
     )
 }
 
