@@ -54,8 +54,9 @@ const useStyles = makeStyles((theme) => ({
 
     // Payment
 
-    containerPayment: {
-        padding: "50px 0"
+    avatar: {
+        margin: theme.spacing(2),
+        padding: "20px",
     }
 }))
 
