@@ -3,6 +3,10 @@ body {
 
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 /* Description */
 
 .description_main {
@@ -29,8 +33,9 @@ body {
 
 /* Payment */
 
-.container_payment {
+.payment_container {
     display: flex;
+    margin-top: 100px;
     flex-direction: column;
     justify-content: center;
 }
@@ -38,5 +43,31 @@ body {
 .payment_avatar {
     text-align: center;
     margin-top: 40px;
-    padding: 20px;
+    padding: 40px;
+}
+
+.payment_phone, .payment_money  {
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 12px;
+    transition: linear 0.15s;
+}
+
+.payment_money  {
+    display: flex;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 12px;
+    transition: linear 0.15s;
+}
+
+.payment_phone, .payment_money:hover {
+    box-shadow:0 0 4px rgba(0,0,0,0.5);
+}
+
+.payment_phone, .payment_money:focus {
+    box-shadow:0 0 4px rgba(0,0,0,0.5);
 }

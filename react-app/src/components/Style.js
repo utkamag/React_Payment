@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     // Header
 
     root: {
-        flexGrow: 1
+        flexGrow: 1,
     },
 
     title: {
@@ -54,7 +54,12 @@ const useStyles = makeStyles((theme) => ({
 
     // Payment
 
-
+    paymentButton: {
+        display: "flex",
+        marginTop: "15px",
+        textAlign: "center",
+        margin: '10px auto'
+    }
 }))
 
 export default useStyles
