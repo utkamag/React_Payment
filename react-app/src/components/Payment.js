@@ -4,9 +4,23 @@ import {Container, Avatar, Box, Typography, TextField, Grid, Button} from "@mate
 import useStyles from "./Style";
 import {PhoneIphone} from "@material-ui/icons";
 import {useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
 
 
 function Payment() {
+
+    // Используем Redux
+
+    const dispatch = useDispatch() // создаем диспатч
+
+    const number = useSelector(state => state.number) // Получаем данные из стейта
+
+
+    const click1 = (numbers) => {
+        dispatch({type:"ADD_NUMBER", payload: numbers})
+    }
+
+
 
     // Стили
 
@@ -14,12 +28,12 @@ function Payment() {
 
     // Используем хук state
 
-    const [number, setNumber] = useState("")
+    const [numbers, setNumbers] = useState("")
 
     // Изменяем number
 
     const handleChange = (e) => {
-        setNumber(e.target.value)
+        setNumbers(e.target.value)
     }
 
     return (
@@ -33,7 +47,7 @@ function Payment() {
 
                 <form>
                     <MaskedInput
-                        value={number}
+                        value={numbers}
                         onChange={handleChange}
                         className="payment_phone"
                         placeholder="Номер телефона"
@@ -47,7 +61,8 @@ function Payment() {
                 </form>
 
                 <Button className={classes.paymentButton} color="primary" variant="contained"
-                        size="large">Оплатить</Button>
+                        size="large" onClick={() => click1()}>Оплатить</Button>
+                <div>{number}</div>
             </Grid>
         </Grid>
     )

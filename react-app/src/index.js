@@ -4,15 +4,20 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import Router from "./components/Router";
+import {Provider} from "react-redux";
+import {store} from "./store/Store";
 
 //Используем библиотеку "react-router-dom" для роутинга
+//Связываем Redux с React с помощью компонента Provider (передаем сюда глобальный store)
 
 ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Router/>
-        </BrowserRouter>
-    </React.StrictMode>,
+    <Provider store={store}>
+        <React.StrictMode>
+            <BrowserRouter>
+                <Router/>
+            </BrowserRouter>
+        </React.StrictMode>
+    </Provider>,
     document.getElementById('root')
 );
 
