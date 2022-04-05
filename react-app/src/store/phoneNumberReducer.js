@@ -9,7 +9,7 @@ const defualtState = {
 export const reducer = (state= defualtState, action) => {
     switch (action.type) {
         case "ADD_NUMBER":
-            return {...state, number: state.number + action.payload}
+            return { number: action.payload }
         default:
             return state
     }

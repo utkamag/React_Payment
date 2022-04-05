@@ -40,13 +40,13 @@ body {
     justify-content: center;
 }
 
-.payment_avatar {
+.payment_avatar, .notpassed_avatar {
     text-align: center;
     margin-top: 40px;
     padding: 40px;
 }
 
-.payment_phone, .payment_money  {
+.payment_phone, .payment_money, .passed_avatar {
     display: flex;
     padding: 10px;
     margin: 0 auto;
@@ -70,4 +70,15 @@ body {
 
 .payment_phone, .payment_money:focus {
     box-shadow:0 0 4px rgba(0,0,0,0.5);
+}
+
+/* Passed */
+
+.passed_avatar {
+    display: flex;
+    padding: 40px;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 12px;
+    transition: linear 0.15s;
 }
