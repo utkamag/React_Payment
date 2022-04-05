@@ -1,15 +1,20 @@
 import {Link} from "react-router-dom";
 import MaskedInput from 'react-text-mask';
-import {Avatar, Typography, Grid, Button} from "@material-ui/core";
+import {Avatar, Typography, Grid, Button, Container, Toolbar, IconButton, Box, AppBar} from "@material-ui/core";
 import useStyles from "./Style";
 import {PhoneIphone} from "@material-ui/icons";
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import Header from "./Header";
 import Home from "@material-ui/icons/Home";
+import {useForm} from "react-hook-form";
 
 
 function Payment() {
+
+    // С целью валидации используем библиотеку react-hook-form
+
+    const { register, handleSubmit } = useForm()
+
 
     // State
 
@@ -21,7 +26,7 @@ function Payment() {
     const dispatch = useDispatch() // создаем диспатч
 
 
-    // Ставим по дефолту
+    // Submit
 
     const handleChange = (e) => {
         e.preventDefault()
@@ -30,7 +35,9 @@ function Payment() {
 
     }
 
-    const number = useSelector(state => state.number) // Получаем данные из стейта
+    // Получаем данные из стейта
+
+    const number = useSelector(state => state.number)
 
 
     // Стили
@@ -39,38 +46,55 @@ function Payment() {
 
 
     return (
+        //Header component
+        <Box>
+            <AppBar>
+                <Container>
+                    <Toolbar>
+                        <Link to="/">
+                            <IconButton>
+                                <Home fontSize="large"/>
+                            </IconButton>
+                        </Link>
+                        <Typography variant="h6" className={classes.titlePay}>React Payment Project</Typography>
+                        <Box>
+                            <Typography variant="h7">{number}</Typography>
+                        </Box>
+                    </Toolbar>
+                </Container>
+            </AppBar>
 
+            <Grid className="payment_container" container direction="column" alignItems="center" // Payment component
+                  justifyContent="center">
 
-        //Payment
+                <Grid item xs={12}>
+                    <Avatar className="payment_avatar" style={{margin: '20px auto', display: "flex"}}>
+                        <PhoneIphone color="primary" fontSize="large"/>
+                    </Avatar>
+                    <Typography color="inherit" align="center" variant="h2" style={{marginBottom: "40px"}}>Оплата
+                        телефона</Typography>
 
-        <Grid className="payment_container" container direction="column" alignItems="center"
-              justifyContent="center">
-            <Grid item xs={12}>
-                <Avatar className="payment_avatar" style={{margin: '20px auto', display: "flex"}}>
-                    <PhoneIphone color="primary" fontSize="large"/>
-                </Avatar>
-                <Typography color="inherit" align="center" variant="h2" style={{marginBottom: "40px"}}>Оплата
-                    телефона</Typography>
-
-                <form onSubmit={(e) => {
-                    handleChange(e)
-                }}>
-                    <MaskedInput
-                        value={numbers}
-                        onChange={(e) => setNumbers(e.target.value)}
-                        className="payment_phone"
-                        placeholder="Номер телефона"
-                        mask={[/\d/, '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
-                    />
-                    <input type="number"
-                           className="payment_money"
-                           placeholder="Сумма ₽"
-                    />
-                    <Button className={classes.paymentButton} color="primary" variant="contained"
-                            size="large" type="submit">Оплатить</Button>
-                </form>
+                    <form onSubmit={handleChange}>
+                        <MaskedInput
+                            value={numbers}
+                            onChange={(e) => setNumbers(e.target.value)}
+                            className="payment_phone"
+                            placeholder="Номер телефона"
+                            mask={[/\d/, '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+                        />
+                        <input type="number"
+                               className="payment_money"
+                               placeholder="Сумма ₽"
+                               min={1}
+                               max={1000}
+                        />
+                        <Typography color={"textSecondary"} align="center" variant={"subtitle2"}>*минимальная сумма оплаты 1₽, максимальная 1000₽</Typography>
+                        <Button className={classes.paymentButton} color="primary" variant="contained"
+                                size="large" type="submit">Оплатить</Button>
+                    </form>
+                </Grid>
             </Grid>
-        </Grid>
+        </Box>
     )
 }
 

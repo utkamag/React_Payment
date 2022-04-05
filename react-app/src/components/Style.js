@@ -11,8 +11,9 @@ const useStyles = makeStyles((theme) => ({
     },
 
     title: {
-        flexGrow: 1
+        flexGrow: 1,
     },
+
     // Company
 
     cardGrid: {
@@ -59,6 +60,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "15px",
         textAlign: "center",
         margin: '10px auto'
+    },
+
+    titlePay : {
+        flexGrow: 1,
     }
 }))
 

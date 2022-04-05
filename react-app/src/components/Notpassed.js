@@ -6,7 +6,7 @@ function Notpassed () {
     return(
         <Grid className="payment_container" container direction="column" alignItems="center"
               justifyContent="center">
-            
+
             <Grid item xs={12}>
                 <Avatar className="notpassed_avatar" style={{margin: '20px auto', display: "flex"}}>
                     <Warning color="inherit" fontSize="large"/>

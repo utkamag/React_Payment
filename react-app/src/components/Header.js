@@ -16,7 +16,6 @@ function Header() {
     // Используем Redux
 
     const number = useSelector(state => state.number) // Получаем данные из стейта
-    console.log(number)
 
     return (
         <AppBar position="relative">
