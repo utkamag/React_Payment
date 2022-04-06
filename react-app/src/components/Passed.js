@@ -6,7 +6,7 @@ import {useEffect} from "react";
 
 function Passed() {
 
-    //Автоиатиечский редирект используем хук useNavigate
+    //Автоматиечский редирект используем хук useNavigate
 
     let navigate = useNavigate()
 
@@ -15,11 +15,11 @@ function Passed() {
 
     useEffect(() => {
 
-        let off = () => {
+        let link1 = () => {
             navigate("/")
         }
 
-        setTimeout(off, 3000)
+        setTimeout(link1, 3000)
 
     }, [])
 

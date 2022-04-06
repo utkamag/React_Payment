@@ -6,7 +6,7 @@ import {useEffect} from "react";
 
 function Notpassed() {
 
-    //Автоиатиечский редирект используем хук useNavigate
+    //Автоматиечский редирект используем хук useNavigate
 
     let navigate = useNavigate()
 
@@ -14,11 +14,11 @@ function Notpassed() {
 
     useEffect(() => {
 
-        let off = () => {
+        let link2 = () => {
             navigate("/")
         }
 
-        setTimeout(off, 3000)
+        setTimeout(link2, 3000)
 
 
     }, [])
