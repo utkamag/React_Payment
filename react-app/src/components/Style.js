@@ -62,8 +62,20 @@ const useStyles = makeStyles((theme) => ({
         margin: '10px auto'
     },
 
-    titlePay : {
+    titlePay: {
         flexGrow: 1,
+    },
+
+    // Error
+
+    error: {
+        textAlign: "center",
+        padding: "175px",
+        marginTop: "40px"
+
+    },
+    errorMainText: {
+        marginBottom: "20px"
     }
 }))
 
