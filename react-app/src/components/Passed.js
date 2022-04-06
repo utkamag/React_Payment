@@ -1,8 +1,28 @@
+import {useNavigate} from "react-router-dom"
 import {Avatar, Button, Grid, Typography} from "@material-ui/core";
 import {CountdownCircleTimer} from 'react-countdown-circle-timer'
 import {CloudDone} from "@material-ui/icons";
+import {useEffect} from "react";
 
 function Passed() {
+
+    //Автоиатиечский редирект используем хук useNavigate
+
+    let navigate = useNavigate()
+
+    //Используем хук, с функционалом componentdidmount
+
+
+    useEffect(() => {
+
+        let off = () => {
+            navigate("/")
+        }
+
+        setTimeout(off, 3000)
+
+    }, [])
+
     return (
         <Grid className="payment_container" container direction="column" alignItems="center"
               justifyContent="center">

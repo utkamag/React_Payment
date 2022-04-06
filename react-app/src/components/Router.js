@@ -9,7 +9,7 @@ import Error from "./Error";
 // Описываем базовый роутинг приложения
 
 function Router() {
-    return(
+    return (
         <Routes>
             <Route path="/" element={<App/>}/>
             <Route path="/payment" element={<Payment/>}/>
@@ -17,7 +17,6 @@ function Router() {
             <Route path="/passed" element={<Passed/>}/>
             <Route path="*" element={<Error/>}/>
         </Routes>
-
     )
 }
 
