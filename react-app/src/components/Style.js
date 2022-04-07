@@ -1,9 +1,10 @@
-
 // Для стилизации используем хук useStyles
 
 import {makeStyles} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+
+
     // Header
 
     root: {
@@ -13,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+
 
     // Company
 
@@ -36,21 +38,21 @@ const useStyles = makeStyles((theme) => ({
     // Footer
 
     footer: {
-        marginTop: "75px"
+        marginTop: "120px",
+        padding: "10px"
     },
     footerBox: {
         display: "flex",
-        justifyContent: "center",
-        marginRight: "5px"
+        justifyContent: "center"
     },
     footerIcon: {
-      marginRight: "5px"
+        marginRight: "5px"
     },
     footerLink: {
         '&:hover': {
             color: "#002984",
         },
-      textDecoration: "none"
+        textDecoration: "none"
     },
 
     // Payment
@@ -76,7 +78,39 @@ const useStyles = makeStyles((theme) => ({
     },
     errorMainText: {
         marginBottom: "20px"
-    }
+    },
+
+    // Адаптация под мобильные устройства
+
+    //description
+
+    description_title: {
+
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "35px",
+        },
+    },
+
+    description_title2: {
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "25px",
+        },
+
+    },
+
+    //payment
+
+    payment_container: {
+
+        [theme.breakpoints.down('sm')]: {
+            marginTop: "190px"
+        },
+
+        [theme.breakpoints.down('md')]: {
+            marginTop: "100px"
+        },
+    },
+
 }))
 
 export default useStyles

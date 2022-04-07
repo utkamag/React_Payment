@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow-x: hidden;
 
 }
 
@@ -55,7 +56,7 @@ body {
     transition: linear 0.15s;
 }
 
-.payment_money  {
+.payment_money {
     display: flex;
     padding: 10px;
     margin: 10px auto;
@@ -65,11 +66,11 @@ body {
 }
 
 .payment_phone, .payment_money:hover {
-    box-shadow:0 0 4px rgba(0,0,0,0.5);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .payment_phone, .payment_money:focus {
-    box-shadow:0 0 4px rgba(0,0,0,0.5);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Passed */
@@ -81,4 +82,21 @@ body {
     width: 80%;
     border-radius: 12px;
     transition: linear 0.15s;
+}
+
+
+/* Media queries */
+
+@media (max-width: 576px) {
+
+    .description_title {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .passedTitle {
+        color: chocolate;
+    }
 }

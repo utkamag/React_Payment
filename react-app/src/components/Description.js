@@ -9,9 +9,9 @@ function Description() {
     return (
     <Container fixed>
         <Paper elevation={1}>
-            <div className="description_main">
-                <Typography variant="h2">Сервис по оплате мобильной связи</Typography>
-                <Typography variant="h4">Пополнение счёта онлайн</Typography>
+            <div className={classes.descriptionmain}>
+                <Typography className={classes.description_title} variant="h2">Сервис по оплате мобильной связи</Typography>
+                <Typography className={classes.description_title2} variant="h4">Пополнение счёта онлайн</Typography>
                 <Typography variant="h8" className="description_pay">Комисия за пополнение - 0%</Typography>
             </div>
         </Paper>

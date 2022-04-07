@@ -15,36 +15,6 @@ function Payment() {
 
     let navigate = useNavigate()
 
-    //State
-
-    const [change, setChange] = useState(0) // По нажатию кнопки, сработает хук useEffect,
-    // (стейт передаем в массив зависимости useEffect)
-
-    //Эмулируем запрос на сервер. Генерируем рандомное число от 0 до 10. Если число 0-5 => успешная оплата,
-    // Если число 6-10 => оплата прошла неуспешно
-
-    useEffect(() => {
-
-        //Рандомное число от 0 до 10 (число 10 включительно)
-
-        const Random = Math.floor(Math.random() * 11);
-
-
-        if (Random >= 6) {
-            navigate("/passed")
-        } else {
-            navigate("/notpassed")
-        }
-
-
-    }, [change])
-
-    // Изменяем стейт
-
-    let addChange = () => {
-        setChange(1)
-    }
-
 
     // State
 
@@ -58,10 +28,23 @@ function Payment() {
 
     // Submit
 
+    //Эмулируем запрос на сервер. Генерируем рандомное число от 0 до 10. Если число 0-3 => неуспешная оплата,
+    // Если число 4-10 => оплата прошла успешно
+
     const handleChange = (e) => {
         e.preventDefault()
 
         dispatch({type: "ADD_NUMBER", payload: numbers})
+
+        //Рандомное число от 0 до 10 (число 10 включительно)
+
+        const Random = Math.floor(Math.random() * 11);
+
+        if (Random >= 4) {
+            navigate("/passed")
+        } else {
+            navigate("/notpassed")
+        }
 
     }
 
@@ -107,6 +90,7 @@ function Payment() {
                     <form onSubmit={handleChange}>
                         <MaskedInput
                             value={numbers}
+                            required={true}
                             onChange={(e) => setNumbers(e.target.value)}
                             className="payment_phone"
                             placeholder="Номер телефона"
@@ -117,11 +101,12 @@ function Payment() {
                                placeholder="Сумма ₽"
                                min={1}
                                max={1000}
+                               required={true}
                         />
                         <Typography color={"textSecondary"} align="center" variant={"subtitle2"}>*минимальная сумма
                             оплаты 1₽, максимальная 1000₽</Typography>
                         <Button className={classes.paymentButton} color="primary" variant="contained"
-                                size="large" type="submit" onClick={addChange}>Оплатить</Button>
+                                size="large" type="submit">Оплатить</Button>
                     </form>
                 </Grid>
             </Grid>
