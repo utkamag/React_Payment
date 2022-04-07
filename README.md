@@ -2,6 +2,6 @@
 
 Ссылка на проект: https://utkamag.github.io/React_Payment/
 
-![](react-project/src/components/image/screenshot.png)
+![](React_Payment/react-app/public/images/screenshot.png)
 
 **Особенности проекта:**
