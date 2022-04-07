@@ -1,5 +1,7 @@
 # React_Payment
 
+#### Тестовый проект по оплате телефона
+
 Ссылка на проект: https://utkamag.github.io/React_Payment/
 
 ![](react-app/public/images/screenshot.png)
