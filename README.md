@@ -5,9 +5,9 @@
 ![](react-app/public/images/screenshot.png)
 
 **Технологический стек:**
-#-React
-#-Redux
-#-MaterialUI
+-React
+-Redux
+-MaterialUI
 
 **npm дополнительные пакеты:**
 "react-form-error": "^1.1.1"
