@@ -4,7 +4,7 @@
 
 ![](react-app/public/images/screenshot.png)
 
-**Технологический стек:
+**Технологический стек:**
 -React
 -Redux
 -MaterialUI
