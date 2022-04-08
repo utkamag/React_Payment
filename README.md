@@ -2,7 +2,10 @@
 
 #### Тестовый проект по оплате телефона
 
-Ссылка на проект: https://utkamag.github.io/React_Payment/
+SPA приложение, развернуть сайт на github pages затруднительно. Используется хостинг
+
+Ссылка на проект: 
+
 
 ![](react-app/public/images/screenshot.png)
 
