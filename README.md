@@ -14,7 +14,7 @@ SPA приложение, развернуть сайт на github pages зат
 - Redux
 - MaterialUI
 
-## npm дополнительные пакеты:
+## Дополнительные зависимости:
 - "react-form-error": "^1.1.1"
 - "react-hook-form": "^7.29.0"
 - "react-input-mask": "^2.0.4"
