@@ -3,6 +3,7 @@ import {Warning} from "@material-ui/icons";
 import {CountdownCircleTimer} from "react-countdown-circle-timer";
 import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
+import Footer from "./Footer";
 
 function Notpassed() {
 
@@ -47,7 +48,6 @@ function Notpassed() {
                     {({remainingTime}) => remainingTime}
                 </CountdownCircleTimer>
             </Grid>
-
         </Grid>
     )
 }

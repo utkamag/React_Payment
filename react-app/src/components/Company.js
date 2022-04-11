@@ -24,14 +24,13 @@ function Company() {
                                 Мегафон
                             </Typography>
                         </CardContent>
-                        <Link to="/payment">
+                        <Link to="/paymentMegafon">
                             <CardActions className={classes.companyButton}>
                                 <Button color="primary" variant="outlined">Оплатить связь</Button>
                             </CardActions>
                         </Link>
                     </Card>
                 </Grid>
-
 
                 <Grid item xs={9} md={12} lg={4}>
                     <Card className={classes.card}>
@@ -45,7 +44,7 @@ function Company() {
                                 МТС
                             </Typography>
                         </CardContent>
-                        <Link to="/payment">
+                        <Link to="/paymentMTC">
                             <CardActions className={classes.companyButton}>
                                 <Button color="primary" variant="outlined">Оплатить связь</Button>
                             </CardActions>
@@ -66,7 +65,7 @@ function Company() {
                                 Yota
                             </Typography>
                         </CardContent>
-                        <Link to="/payment">
+                        <Link to="/paymentYota">
                             <CardActions className={classes.companyButton}>
                                 <Button color="primary" variant="outlined">Оплатить связь</Button>
                             </CardActions>

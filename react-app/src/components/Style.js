@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column"
     },
     cardMedia: {
-        paddingTop: "56.25%" // для того что-бы было изображение формаьа 16:9
+        paddingTop: "56.25%", // для того что-бы было изображение формаьа 16:9
+        width: "100%",
     },
     cardContent: {
         flexGrow: "1"
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
     companyButton: {
         justifyContent: "center"
     },
+
     // Footer
 
     footer: {
@@ -79,6 +81,29 @@ const useStyles = makeStyles((theme) => ({
     errorMainText: {
         marginBottom: "20px"
     },
+
+    // Megafon
+
+    cardMediaMegafon: {
+        paddingTop: "25.25%",
+        width: "100%",
+    },
+
+    // MTC
+
+    cardMediaMTC: {
+        paddingTop: "25.25%",
+        width: "100%",
+    },
+
+    // Yota
+
+    cardMediaYota: {
+        paddingTop: "30.25%",
+        width: "100%",
+    },
+
+
 
     // Адаптация под мобильные устройства
 

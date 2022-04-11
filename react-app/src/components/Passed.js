@@ -28,7 +28,6 @@ function Passed() {
     }, [])
 
     return (
-
         <Grid className="payment_container" container direction="column" alignItems="center"
               justifyContent="center">
             <Grid item xs={12}>
